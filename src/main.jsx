@@ -1,9 +1,11 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import React from 'react'; // Impor React
+import ReactDOM from 'react-dom/client'; // Impor ReactDOM
+import App from './App.jsx'; // Impor komponen App
+import { SpeedInsights } from "@vercel/speed-insights/react"; // Impor SpeedInsights
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <App />
-  </StrictMode>,
-)
+    <SpeedInsights />
+  </React.StrictMode>,
+);
